@@ -94,9 +94,12 @@ makeColumn();
   {
 while (Robot.frontIsClear())
 {
+    
     while (Robot.onDark())
     {
-        
+        //here the first two conditions for this method to trigger
+        //is that the robot has its front clear and is on a dark space
+        //the robot will make the first check to determine if the second check is needed.
     if (Robot.onDark())
     {
      Robot.makeLight();
@@ -110,6 +113,9 @@ while (Robot.frontIsClear())
         }
         else
         {
+            //The robot then proceeded to, if the space is dark, to execute the methods listed
+            //under. Then it will check whether the space its on is not dark, and if so will
+            //make it dark and excecute the methods under
      while (Robot.onDark())
      {
         Robot.move();
@@ -119,6 +125,9 @@ while (Robot.frontIsClear())
             fullDown();
             fullLeft();
         }
+        //otherwise, the robot will continue to check for darkness and move forward
+        //if it encounters a light space, it will make it dark and move against the collum
+        
         }
     }
     
@@ -134,7 +143,7 @@ if (Robot.onDark())
     turnRight();
     Robot.move();
     Robot.makeDark();
-  
+  //the robot will make a final check for darkness and end the puzzle with necessary movements
 }
   }
 
